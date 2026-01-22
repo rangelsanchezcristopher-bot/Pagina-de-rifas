@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rifas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-title">EXOTICA FORD RAPTOR 2024</div>
+      <div class="brand-sub">4x4 + $30,000 MXN • 13 ENERO 2026</div>
+    </div>
+  </div>
+</header>
+
+<main class="layout">
+  <!-- CARRITO IZQUIERDO -->
+  <aside class="sidebar">
+    <h3>Boletos seleccionados</h3>
+
+    <div id="selectedList" class="selected-list"></div>
+
+    <div class="sidebar-actions">
+      <button id="clearBtn" class="btn-secondary" type="button">
+        Limpiar
+      </button>
+      <button id="confirmBtn" class="btn-primary" type="button" disabled>
+        Confirmar boletos
+      </button>
+    </div>
+
+    <div class="hint">
+      Da click en los números para agregarlos o quitarlos.
+    </div>
+  </aside>
+
+  <!-- GRID DE BOLETOS -->
+  <section class="content">
+    <h2 class="title">Haz click en tu número de la suerte</h2>
+    <div id="grid" class="grid"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  WhatsApp: <strong>(442) 447 2411</strong>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden" aria-hidden="true">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+
+  <div class="modal-card" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose">✕</button>
+
+    <h3 class="modal-title">
+      LLENA TUS DATOS Y DA CLICK EN APARTAR
+    </h3>
+
+    <p class="modal-sub" id="modalSub"></p>
+
+    <form id="reserveForm" class="form">
+      <input id="phone" class="input" placeholder="Teléfono" required />
+      <input id="name" class="input" placeholder="Nombre(s)" required />
+      <input id="lastname" class="input" placeholder="Apellidos" required />
+
+      <select id="state" class="input" required>
+        <option value="">Selecciona estado</option>
+        <option>QUERÉTARO</option>
+        <option>CDMX</option>
+        <option>JALISCO</option>
+        <option>NUEVO LEÓN</option>
+        <option>PUEBLA</option>
+        <option>GUANAJUATO</option>
+        <option>MICHOACÁN</option>
+        <option>VERACRUZ</option>
+      </select>
+
+      <div class="form-note">
+        Al apartar serás redirigido a WhatsApp para enviar la información
+        de tu boleto.
+      </div>
+
+      <button class="btn-primary big" type="submit">
+        APARTAR
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

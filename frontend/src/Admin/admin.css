@@ -1,0 +1,119 @@
+.adminPage{
+  min-height: 100vh;
+  padding: 24px;
+  background: linear-gradient(180deg, #05070b, #0a0f17);
+  color: #fff;
+  font-family: system-ui;
+}
+
+/* HEADER */
+.adminHeader{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom: 20px;
+}
+.adminHeader h1{
+  margin:0;
+  font-size: 22px;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.stat{
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 14px;
+  padding: 16px;
+}
+.stat span{
+  font-size: 12px;
+  opacity: .7;
+}
+.stat strong{
+  display:block;
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+/* TABLE */
+.tableCard{
+  background: rgba(18,22,30,.7);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.1);
+  overflow: hidden;
+}
+
+.tableHeader{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 14px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.tableHeader select{
+  background: rgba(0,0,0,.4);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+.tableScroll{
+  max-height: 65vh;
+  overflow: auto;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td{
+  padding: 10px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  text-align: left;
+}
+
+thead{
+  position: sticky;
+  top: 0;
+  background: #0a0f17;
+}
+
+.badge{
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.badge.free{ background:#14532d; color:#22c55e; }
+.badge.reserved{ background:#78350f; color:#f59e0b; }
+.badge.paid{ background:#4c1d95; color:#a855f7; }
+
+.actions{
+  display:flex;
+  gap: 6px;
+}
+.actions button{
+  border: none;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.actions .pay{
+  background:#22c55e;
+  color:#000;
+}
+.actions .free{
+  background:#ef4444;
+  color:#fff;
+}
